@@ -1,0 +1,7 @@
+<form method="post">
+  {% csrf_token %}
+
+  <p>Desea borrar el Tweet: " {{object.content}} "?</p>
+  <button type="submit">Delete</button>
+
+</form>

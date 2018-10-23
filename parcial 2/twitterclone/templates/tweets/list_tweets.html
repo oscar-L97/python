@@ -1,0 +1,13 @@
+{%extends "base.html"%}
+{%block title%}ListTweets{%endblock%}
+{%block content%}
+<ul>
+  {% for tweet in object_list %}
+  <li>{{ tweet.content }}</li>
+  <a href="{% url 'tweets:detail_tweets' tweet.id %}">view</a>
+  <a href="{% url 'tweets:update_tweets' tweet.id %}">Update</a>
+  <a href="{% url 'tweets:delete_tweets' tweet.id %}">Delete</a>
+  {% endfor %}
+
+</ul>
+{%endblock%}
