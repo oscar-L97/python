@@ -1,0 +1,26 @@
+{%extends "base.html"%}
+{%block title%}Lista total{%endblock%}
+{%block content%}
+{% for trabajo in object_list %}
+{% if trabajo.categoria == 'CT'%}
+<div class="container justify-content-center">
+  <div class="row ">
+    <div class="col-md-6">
+      <h4>Titulo de investigacion: {{ trabajo.titulo }} </h4>
+    </div>
+  </div>
+  <div class="row ">
+    <div class="col-md-12">
+      <ul>
+        <li>Autor: {{ trabajo.autor }}</li>
+        <li>Categoria: {{ trabajo.get_categoria_display}}</li>
+      </ul>
+      <a href="{% url 'trabajos:update_trabajo' trabajo.id %}" class="btn btn-primary">Actualizar</a>
+      <a href="{% url 'trabajos:delete_trabajo' trabajo.id %}" class="btn btn-primary">Borrar</a>
+      <hr>
+    </div>
+  </div>
+</div>
+{%endif%}
+{% endfor %}
+{%endblock%}

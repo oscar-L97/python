@@ -1,0 +1,18 @@
+{%extends "base.html"%}
+{%block title%}Actualizar{%endblock%}
+{%block content%}
+  <form method="POST">
+    <div class="container">
+      <div class="row">
+        <div class="form-group">
+          {% csrf_token %}
+
+          <p>Categoria: {{form.categoria}}</p><br>
+          <p>Titulo de la investigacion: {{form.titulo}}</p><br>
+          <p>Nombre del autor: {{form.autor}}</p>
+          <input type="submit" name="create" value="Actualizar" class="btn btn-primary">
+        </div>
+      </div>
+    </div>
+  </form>
+{%endblock%}

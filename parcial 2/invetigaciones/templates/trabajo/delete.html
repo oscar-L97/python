@@ -1,0 +1,12 @@
+{%extends "base.html"%}
+{%block title%}Borrar{%endblock%}
+{%block content%}
+<form method="post">
+  {% csrf_token %}
+
+  <p>Desea borrar a investigacion: " {{object.titulo}} "?</p>
+  <button type="submit" class="btn btn-primary">Borrar</button>
+  <a href="{% url 'trabajos:list_all' %}" class="btn btn-primary">Regresar</a>
+
+</form>
+{%endblock%}

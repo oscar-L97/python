@@ -1,0 +1,30 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="{% url 'trabajos:list_all' %}">Investigaciones</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item">
+        <a class="nav-link" href="{% url 'trabajos:list_comp' %}">Ciencias Computacionales</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="{% url 'trabajos:list_tierra' %}">Ciencias de la Tierra</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="{% url 'trabajos:list_nat' %}">Ciencias Naturales</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="{% url 'trabajos:list_soc' %}">Ciencias Sociales</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="{% url 'trabajos:list_med' %}">Ciencias Medicas</a>
+      </li>
+      <li class="nav-item">
+        <a href="{% url 'trabajos:create_document' %}" class="btn btn-success">  Subir</a>
+      </li>
+
+    </ul>
+  </div>
+</nav>

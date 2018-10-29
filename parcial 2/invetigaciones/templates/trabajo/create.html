@@ -1,0 +1,22 @@
+{%extends "base.html"%}
+{%block title%}Subir trabajo{%endblock%}
+{%block content%}
+
+  <form method="POST" enctype="multipart/form-data">
+    <div class="container">
+      <div class="row">
+        <div class="form-group">
+          {% csrf_token %}
+
+          <p>Seleccione su archivo: {{form.documento}} </p> <br>
+          <p>Categoria: {{form.categoria}}</p><br>
+          <p>Titulo de la investigacion: {{form.titulo}}</p><br>
+          <p>Nombre del autor: {{form.autor}}</p>
+          <input type="submit" name="create" value="Guardar" class="btn btn-primary">
+        </div>
+      </div>
+    </div>
+
+  </form>
+
+{%endblock%}
