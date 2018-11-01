@@ -1,0 +1,15 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+<h3 class="">{{soft.titulo}}</h3>
+
+<div  class="container">
+  <div class="row">
+    <label>Descripcion: </label> {{soft.descripcion}}
+  </div>
+  <div class="row">
+    <label>Departamento: </label> {{soft.departamento}}
+  </div>
+</div>
+<a href="/directorio" class="btn">Ver todo el software</a>
+{% endblock %}

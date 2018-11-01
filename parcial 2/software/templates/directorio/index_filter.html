@@ -1,0 +1,17 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+
+<ul >
+  <li ><h4>{{titulo}}</h4></li>
+  {% for swpkg in swpkgs %}
+    <li><a  href="/directorio/detalles/{{swpkg.id}}">{{swpkg.titulo}}<label >{{swpkg.departamento}}</label> </a></li>
+  {% endfor %}
+</ul>
+<br>
+<div class="row"><div ><a style="display:block"  href="/nuevo_soft">Nuevo Software</a></div></div>
+<div class="row"><div ><a style="display:block"  href="/nuevo_dept">Nuevo Departamento</a></div></div>
+<div class="row"><div ><a style="display:block"  href="/admin">Admin Login</a></div>
+</div>
+
+{% endblock %}

@@ -1,0 +1,21 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+
+<ul >
+  <li ><h4>{{titulo}}</h4></li>
+  {% for todo in todo %}
+    <li><a  href="/directorio/detalles/{{todo.id}}">Software: {{todo.titulo}} <br><label  > Departamento: {{todo.departamento}}</label> </a></li>
+  {% endfor %}
+</ul>
+<br><hr>
+<div class="container">
+  <div class="row"><div ><a class="btn btn-primary"  href="/nuevo_soft">Nuevo Software</a></div></div>
+  <br>
+  <div class="row"><div ><a class="btn btn-primary"  href="/nuevo_dept">Nuevo Departamento</a></div></div>
+  <br>
+  <div class="row"><div ><a class="btn btn-primary"  href="/admin">Admin Login</a></div>
+</div>
+</div>
+
+{% endblock %}
